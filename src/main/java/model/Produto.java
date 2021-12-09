@@ -9,8 +9,25 @@ import java.time.LocalDate;
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Long id;
+
+    private String nome;
+    private String descricao;
+    private BigDecimal preco;
+    private LocalDate dataCadastro = LocalDate.now();
+
+    @ManyToOne
+    private Categoria categoria;
+
+    public Produto(){}
+
+    public Produto(String nome, String descricao, BigDecimal preco, Categoria Categoria) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.categoria = categoria;
+    }
+
 
     public String getNome() {
         return nome;
@@ -36,19 +53,6 @@ public class Produto {
         this.preco = preco;
     }
 
-    private String nome;
-    private String descricao;
-    private BigDecimal preco;
-
-    public Produto(String nome, String descricao, BigDecimal preco, Categoria categoria) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.preco = preco;
-        this.categoria = categoria;
-    }
-
-    private LocalDate dataCadastro = LocalDate.now();
-
     public LocalDate getDataCadastro() {
         return dataCadastro;
     }
@@ -64,9 +68,6 @@ public class Produto {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-
-    @Enumerated(EnumType.STRING)
-    private Categoria categoria;
 
     public Long getId() {
         return id;
