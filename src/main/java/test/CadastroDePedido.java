@@ -1,42 +1,49 @@
 package test;
 
 import dao.CategoriaDao;
+import dao.ClienteDao;
+import dao.PedidoDao;
 import dao.ProdutoDao;
-import model.Categoria;
-import model.Produto;
+import model.*;
 import util.JPAUtil;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.math.BigDecimal;
-import java.util.List;
 
-public class CadastroDeProduto {
+public class CadastroDePedido {
 
-    public static void main(String[] args){
-        cadastrarProduto();
-
+    public static void main(String[] args) {
+        popularBancoDeDados();
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao produtoDao = new ProdutoDao(em);
+        ClienteDao clienteDao = new ClienteDao(em);
 
-        Produto p = produtoDao.buscarPorId(1l);
-        System.out.println(p.getPreco());
+        Produto produto = produtoDao.buscarPorId(1l);
+        Cliente cliente = clienteDao.buscarPorId(1l);
 
-        List<Produto> todos = produtoDao.buscarPorNomeDaCategoria("CELULARES");
-        todos.forEach(p2 -> System.out.println(p.getNome()));
+        em.getTransaction().begin();
 
-        BigDecimal precoDoProduto = produtoDao.buscarPrecoDoProdutoPorNome("Xiaomi");
-        System.out.println("Preço do produto: " +precoDoProduto);
+        Pedido pedido = new Pedido(cliente);
+        pedido.adicionarItem(new ItemPedido(10, pedido, produto));
+
+        PedidoDao pedidoDao = new PedidoDao(em);
+        pedidoDao.cadastrar(pedido);
+
+        em.getTransaction().commit();
     }
 
-    private static void cadastrarProduto() {
+    private static void popularBancoDeDados() {
         Categoria celulares = new Categoria("CELULARES");
         Produto celular = new Produto("Xiaomi", "Muito legal", new BigDecimal("900"), celulares );
+
+        Cliente cliente = new Cliente("Rodrigo", "123456");
+
 
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao produtoDao = new ProdutoDao(em);
         CategoriaDao categoriaDao = new CategoriaDao(em);
+        ClienteDao clienteDao = new ClienteDao(em);
+
 
         em.getTransaction().begin();
 

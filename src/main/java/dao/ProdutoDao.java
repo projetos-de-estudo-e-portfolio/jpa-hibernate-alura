@@ -26,6 +26,7 @@ public class ProdutoDao {
         produto = em.merge(produto);
         this.em.remove(produto);
     }
+
     public Produto buscarPorId(Long id){
         return em.find(Produto.class, id);
     }
