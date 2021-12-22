@@ -33,11 +33,11 @@ public class CadastroDeProduto {
         Categoria celulares = new Categoria("CELULARES");
         Produto celular = new Produto("Xiaomi", "Muito legal", new BigDecimal("900"), celulares );
 
-        Categoria videogames = new Categoria("VIDEOGAMES");
-        Produto videogame = new Produto("PS5", "Playstation 5", new BigDecimal("5000"), videogames );
-
-        Categoria informatica = new Categoria("INFORMATICA");
-        Produto macbook = new Produto("Macbook", "Macbook Pro", new BigDecimal("900"), informatica );
+//        Categoria videogames = new Categoria("VIDEOGAMES");
+//        Produto videogame = new Produto("PS5", "Playstation 5", new BigDecimal("5000"), videogames );
+//
+//        Categoria informatica = new Categoria("INFORMATICA");
+//        Produto macbook = new Produto("Macbook", "Macbook Pro", new BigDecimal("900"), informatica );
 
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao produtoDao = new ProdutoDao(em);
@@ -48,12 +48,11 @@ public class CadastroDeProduto {
         categoriaDao.cadastrar(celulares);
         produtoDao.cadastrar(celular);
 
-        categoriaDao.cadastrar(videogames);
-        produtoDao.cadastrar(videogame);
-
-        categoriaDao.cadastrar(informatica);
-        produtoDao.cadastrar(macbook);
-
+//        categoriaDao.cadastrar(videogames);
+//        produtoDao.cadastrar(videogame);
+//
+//        categoriaDao.cadastrar(informatica);
+//        produtoDao.cadastrar(macbook);
 
         em.getTransaction().commit();
         em.close();

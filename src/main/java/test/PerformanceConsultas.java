@@ -56,6 +56,12 @@ public class PerformanceConsultas {
 
         clienteDao.cadastrar(cliente);
 
+        pedidoDao.cadastrar(pedido);
+        pedidoDao.cadastrar(pedido2);
+
+        em.getTransaction().commit();
+        em.close();
+
     }
 }
 
