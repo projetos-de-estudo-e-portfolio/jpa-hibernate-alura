@@ -1,0 +1,8 @@
+
+K
+java:S1172"0Remove this unused method parameter "Categoria".(ËÄæËýÿÿÿÿ
+E
+java:S1656"/Remove or correct this useless self-assignment.(û£²›
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÄæËýÿÿÿÿ
+}
+java:S4165"gRemove this useless assignment; "categoria" already holds the assigned value along all execution paths.(û£²›

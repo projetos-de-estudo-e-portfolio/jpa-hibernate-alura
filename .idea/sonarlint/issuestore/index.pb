@@ -1,25 +1,29 @@
 
-R
-"src/main/java/model/Categoria.java,8\e\8e117a6ac2f06fd67126ef66c456d68142d986c9
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-P
- src/main/java/model/Cliente.java,8\c\8c289541017307b7646dc4e6384db7964e3d55df
-O
-src/main/java/model/Pedido.java,e\1\e171e57083bac8b9de957da537abf66736b544ba
-S
-#src/main/java/model/ItemPedido.java,9\5\956054075b8b3e3ca80a6e7b0d6253c7e0e20477
 Q
 !src/main/java/dao/ClienteDao.java,5\8\58bc3e900093614c45ebd44f73cc16998cf1ab92
 Y
 )src/main/java/vo/RelatorioDeVendasVo.java,9\8\9850045f4dab40a6564190592c2f27da7e75df94
-P
- src/main/java/dao/PedidoDao.java,e\c\ec996b5956a56ab45b7a683f42fe5c9038a66a2d
 S
 #src/main/java/dao/CategoriaDao.java,a\9\a992d5b4e76fdf077c9a639f0337b89da0f19d47
 O
 src/main/java/util/JPAUtil.java,0\9\092eafaf738ac8e1731b1f5a5c7798716c904657
+Q
+!src/main/java/dao/ProdutoDao.java,0\6\06ed3a29bb4d66cb9efb0fbb88b5d91316b2fbff
 Y
 )src/main/java/test/CadastroDeProduto.java,9\e\9e08cbb66fd224e9148a892098eb2ac11ec8e199
 X
 (src/main/java/test/CadastroDePedido.java,0\5\059cf700c5f4789a621597390b94b14b85c0a99d
+O
+src/main/java/model/Pedido.java,e\1\e171e57083bac8b9de957da537abf66736b544ba
+P
+ src/main/java/model/Produto.java,3\6\36ee6a0b19d90716969e5bb4c7ee3a30be5f2dd4
+S
+#src/main/java/model/ItemPedido.java,9\5\956054075b8b3e3ca80a6e7b0d6253c7e0e20477
+R
+"src/main/java/model/Categoria.java,8\e\8e117a6ac2f06fd67126ef66c456d68142d986c9
+P
+ src/main/java/model/Cliente.java,8\c\8c289541017307b7646dc4e6384db7964e3d55df
+\
+,src/main/java/test/PerformanceConsultas.java,7\d\7d183de6e3ec73588c5fe49efcf3b3ddf728f9c3
