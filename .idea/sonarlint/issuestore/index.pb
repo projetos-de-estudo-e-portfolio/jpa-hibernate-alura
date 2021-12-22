@@ -9,8 +9,6 @@ O
 src/main/java/util/JPAUtil.java,0\9\092eafaf738ac8e1731b1f5a5c7798716c904657
 Y
 )src/main/java/test/CadastroDeProduto.java,9\e\9e08cbb66fd224e9148a892098eb2ac11ec8e199
-X
-(src/main/java/test/CadastroDePedido.java,0\5\059cf700c5f4789a621597390b94b14b85c0a99d
 P
  src/main/java/model/Produto.java,3\6\36ee6a0b19d90716969e5bb4c7ee3a30be5f2dd4
 S
